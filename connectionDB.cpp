@@ -50,6 +50,15 @@ void listRecords(pqxx::connection &C){
 	std::cout << "Fin des donnes" << std::endl;
 }
 
+void updateRecords(pqxx::connection &C){
+	const char * sqlStatement = "UPDATE utilisateur SET mdp = 'mdpChange'"\
+				    " WHERE employee_id = 1;";
+	pqxx::work W(C);
+	W.exec(sqlStatement);
+	W.commit();
+	std::cout << "Update des donnes a ete un succes" << std::endl;	
+}
+
 int main(){
 	try{
 		pqxx::connection C("dbname = connecttest user = ishnewalon password = inf556 hostaddr = 127.0.0.1 port = 5432");
@@ -57,6 +66,8 @@ int main(){
 			std::cout << "La connexion a reussie" << std::endl;
 			createTable(C);
 			populateTable(C);
+			listRecords(C);
+			updateRecords(C);
 			listRecords(C);
 			emptyTable(C);
 			listRecords(C);
