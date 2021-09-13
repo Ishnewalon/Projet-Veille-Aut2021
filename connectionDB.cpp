@@ -14,12 +14,26 @@ void createTable(pqxx::connection &C){
 	std::cout << "La table a ete cree" << std::endl;
 }
 
+void populateTable(pqxx::connection &C){
+	const char * sqlStatement = "INSERT INTO utilisateur VALUES "\
+				     "(1, 'Doe', 'John','doej'); "\
+				     "INSERT INTO utilisateur VALUES "\
+				     "(2, 'Hanes', 'George','hang'); "\
+				     "INSERT INTO utilisateur VALUES "\
+				     "(3, 'Damico', 'Nick','damn'); ";
+	pqxx::work W(C);
+	W.exec(sqlStatement);
+	W.commit();
+	std::cout << "Insert a fonctionne avec succes" << std::endl;
+}
+
 int main(){
 	try {
 		pqxx::connection C("dbname = connecttest user = ishnewalon password = inf556 hostaddr = 127.0.0.1 port = 5432" );
 		if (C.is_open()){
 			std::cout << "La connexion a reussie" << std::endl;
 			createTable(C);
+			populateTable(C);
 		}
 		else {
 			std::cout << "La connexion a echouee" << std::endl;
