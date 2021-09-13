@@ -27,13 +27,22 @@ void populateTable(pqxx::connection &C){
 	std::cout << "Insert a fonctionne avec succes" << std::endl;
 }
 
+void emptyTable(pqxx::connection &C){
+	const char * sqlStatement = "DELETE FROM utilisateur;";
+	pqxx::work W(C);
+	W.exec(sqlStatement);
+	W.commit();
+	std::cout << "DELETE a foncitonne avec succes" << std::endl;
+}
+
 int main(){
 	try {
 		pqxx::connection C("dbname = connecttest user = ishnewalon password = inf556 hostaddr = 127.0.0.1 port = 5432" );
 		if (C.is_open()){
 			std::cout << "La connexion a reussie" << std::endl;
 			createTable(C);
-			populateTable(C);
+			//populateTable(C);
+			emptyTable(C);
 		}
 		else {
 			std::cout << "La connexion a echouee" << std::endl;
