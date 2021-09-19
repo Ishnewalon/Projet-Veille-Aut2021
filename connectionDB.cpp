@@ -59,7 +59,7 @@ void updateRecords(pqxx::connection &C){
 	std::cout << "Update des donnes a ete un succes" << std::endl;	
 }
 
-int main(){
+/*int main(){
 	try{
 		pqxx::connection C("dbname = connecttest user = ishnewalon password = inf556 hostaddr = 127.0.0.1 port = 5432");
 		if (C.is_open()){
@@ -84,4 +84,4 @@ int main(){
 	}
 	return 0;
 }
-
+*/
