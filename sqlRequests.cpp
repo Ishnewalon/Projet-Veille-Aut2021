@@ -21,6 +21,24 @@ void SQLRequests::listRecords(pqxx::connection &C, std::string tableName){
 	        std::cout << "Fin des donnes" << std::endl;
 }
 
+bool SQLRequests::findUser(pqxx::connection &C, std::string numEmp, std::string mdp){
+                std::string sqlStatement = "SELECT * FROM utilisateurs WHERE numemp = '" + numEmp + "' AND mdp = '" + mdp + "' ;";
+                pqxx::nontransaction N(C);
+                pqxx::result R(N.exec(sqlStatement));
+                
+                for (pqxx::result::const_iterator iterator = R.begin(); iterator != R.end(); ++iterator){ //See what is best ++iterator or iterator++
+
+			std::cout <<  iterator["nom"].as<std::string>() << std::endl;
+			std::cout << iterator["prenom"].as<std::string>() << std::endl;
+			return true;
+                }
+                std::cout << "Fin des donnes" << std::endl;
+		return false;
+}
+
+
+
+
 /*void SQLRequests::createTable(pqxx::connection &C){
 	const char * sqlStatement = "CREATE TABLE IF NOT EXISTS " + tableName + "(" \
 				     "EMPLOYEE_ID INT PRIMARY KEY    NOT NULL," \

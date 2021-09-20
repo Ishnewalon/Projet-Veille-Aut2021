@@ -16,5 +16,6 @@ class SQLRequests {
 		//void emptyTable(pqxx::connection &C);
 		std::string toString();
 		void listRecords(pqxx::connection &C, std::string tableName);
+		bool findUser(pqxx::connection &C, std::string numEmp, std::string mdp);
 		//void updateRecords(pqxx::connection &C, std::string tableName);
 };
