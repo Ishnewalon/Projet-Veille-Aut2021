@@ -9,6 +9,7 @@ class SQLRequests {
 		std::string password{"inf556"};
 		std::string hostaddr{"127.0.0.1"};
 		std::string port{"5432"};
+
 	public:
 		SQLRequests(){}
 		//void createTable(pqxx::connection &C);

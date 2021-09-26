@@ -1,0 +1,34 @@
+INSERT INTO souper (nom, description, prix, israbais, isdispo) VALUES 
+	('Bolognaise', 'Pates avec une sauce bolognaise', 12.99, false, true);
+
+INSERT INTO souper (nom, description, prix, israbais, isdispo) VALUES 
+	('Lasagne', 'Lasagne avec une sauce bolognaise', 15.99, false, true);
+
+INSERT INTO souper (nom, description, prix, israbais, isdispo) VALUES 
+	('Steak', 'Boeuf AAA marine 28 jours', 25.99, false, true);
+
+INSERT INTO souper (nom, description, prix, israbais, isdispo) VALUES 
+	('Pizza', 'Au fromage. Autres garnitures disponible', 10.99, false, true);
+
+INSERT INTO souper (nom, description, prix, israbais, isdispo) VALUES 
+	('Saumon fume', 'Saumon fume sur une planche de cedre', 23.99, false, true);
+
+INSERT INTO dejeuner (nom, description, prix, israbais, isdispo) VALUES 
+	('Crepes', '2 crepes natures avec saucisses ou bacon', 13.99, false, true);
+
+INSERT INTO dejeuner (nom, description, prix, israbais, isdispo) VALUES 
+	('Crepe choco-fruits', '1 crepe avec nutella et des petits fruits', 17.99, false, true);
+
+INSERT INTO dejeuner (nom, description, prix, israbais, isdispo) VALUES 
+	('Pain dore', '2 pains dore avec saucisses ou bacon', 14.99, false, true);
+
+INSERT INTO dejeuner (nom, description, prix, israbais, isdispo) VALUES 
+	('Yogourt', 'Yogourt nature avec du granola et des petits fruits', 15.99, false, true);
+
+INSERT INTO dejeuner (nom, description, prix, israbais, isdispo) VALUES 
+	('', 'Yogourt nature avec du granola et des petits fruits', 15.99, false, true);
+
+
+
+
+
