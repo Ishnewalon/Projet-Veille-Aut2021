@@ -4,18 +4,18 @@
 
 class SQLRequests {
 	private:
-		std::string dbName{"facturation_resto"};
-		std::string userName{"ishnewalon"};
-		std::string password{"inf556"};
-		std::string hostaddr{"127.0.0.1"};
-		std::string port{"5432"};
+		static const std::string dbName;
+		static const std::string userName;
+		static const std::string password;
+		static const std::string hostaddr;
+		static const std::string port;
 
 	public:
 		SQLRequests(){}
 		//void createTable(pqxx::connection &C);
 		//void populateTable(pqxx::connection &C);
 		//void emptyTable(pqxx::connection &C);
-		std::string connectionString();
+		static std::string connectionString();
 		void listRecords(pqxx::connection &C, std::string tableName);
 		bool findUser(pqxx::connection &C, std::string numEmp, std::string mdp);
 		//void updateRecords(pqxx::connection &C, std::string tableName);
