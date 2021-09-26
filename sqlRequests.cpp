@@ -13,9 +13,8 @@ static std::string SQLRequests::connectionString(){
 		return "dbname = " + dbName + " user = " + userName + " password = " + password + " hostaddr = " + hostaddr + " port = " + port;
 	}	
 
-void SQLRequests::listRecords(pqxx::connection &C, std::string tableName){
-        	//const char * sqlStatement = "SELECT * FROM " + tableName.c_str() + ";";
-		std::string sqlStatement = "SELECT * FROM " + tableName + ";";
+void SQLRequests::listRecords(std::string tableName){
+        	std::string sqlStatement = "SELECT * FROM " + tableName + ";";
         	pqxx::nontransaction N(C);
         	pqxx::result R(N.exec(sqlStatement));
 		int counter = 1;
@@ -27,7 +26,7 @@ void SQLRequests::listRecords(pqxx::connection &C, std::string tableName){
 	        std::cout << "Fin des donnes" << std::endl;
 }
 
-bool SQLRequests::findUser(pqxx::connection &C, std::string numEmp, std::string mdp){
+bool SQLRequests::findUser(std::string numEmp, std::string mdp){
                 std::string sqlStatement = "SELECT * FROM utilisateurs WHERE numemp = '" + numEmp + "' AND mdp = '" + mdp + "' ;";
                 pqxx::nontransaction N(C);
                 pqxx::result R(N.exec(sqlStatement));
