@@ -3,7 +3,7 @@
 #include <pqxx/pqxx>
 #include "SQLRequests.hpp"
 
-std::string SQLRequests::toString(){
+std::string SQLRequests::connectionString(){
 		return "dbname = " + dbName + " user = " + userName + " password = " + password + " hostaddr = " + hostaddr + " port = " + port;
 	}	
 
