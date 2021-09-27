@@ -2,7 +2,7 @@ INSERT INTO souper (nom, description, prix, israbais, isdispo) VALUES
 	('Bolognaise', 'Pates avec une sauce bolognaise', 12.99, false, true);
 
 INSERT INTO souper (nom, description, prix, israbais, isdispo) VALUES 
-	('Lasagne', 'Lasagne avec une sauce bolognaise', 15.99, false, true);
+	('Cotes levees', 'Nos fameuse cotes levees sont fait avec une sauce BBQ', 28.99, false, true);
 
 INSERT INTO souper (nom, description, prix, israbais, isdispo) VALUES 
 	('Steak', 'Boeuf AAA marine 28 jours', 25.99, false, true);
@@ -12,6 +12,8 @@ INSERT INTO souper (nom, description, prix, israbais, isdispo) VALUES
 
 INSERT INTO souper (nom, description, prix, israbais, isdispo) VALUES 
 	('Saumon fume', 'Saumon fume sur une planche de cedre', 23.99, false, true);
+
+
 
 INSERT INTO dejeuner (nom, description, prix, israbais, isdispo) VALUES 
 	('Crepes', '2 crepes natures avec saucisses ou bacon', 13.99, false, true);
@@ -26,9 +28,21 @@ INSERT INTO dejeuner (nom, description, prix, israbais, isdispo) VALUES
 	('Yogourt', 'Yogourt nature avec du granola et des petits fruits', 15.99, false, true);
 
 INSERT INTO dejeuner (nom, description, prix, israbais, isdispo) VALUES 
-	('', 'Yogourt nature avec du granola et des petits fruits', 15.99, false, true);
+	('Oeufs Bacon', '2 oeufs et du bacon. Servi avec du pain blanc ou brun', 10.99, false, true);
 
 
 
+INSERT INTO diner (nom, description, prix, israbais, isdisp) VALUES
+	('Macaroni au fromage', 'Un macaroni fait au 3 fromages: cheddar, mozarella et Monterey Jack', 12.99, false, true);
 
+INSERT INTO diner (nom, description, prix, israbais, isdisp) VALUES
+	('Hot Dog', '2 hot dogs steamer avec frites. Peut etre changer pour poutine', 8.99, false, true);
 
+INSERT INTO diner (nom, description, prix, israbais, isdisp) VALUES
+	('Hamburger', 'Un hamburger avec frites. Peut etre changer pour une poutine', 10.99, false, true);
+
+INSERT INTO diner (nom, description, prix, israbais, isdisp) VALUES
+	('BLT', 'BLT viande blanche ou fonce. Servit avec frites et salade de choux', 12.99, false, true);
+
+INSERT INTO diner (nom, description, prix, israbais, isdisp) VALUES
+	('Wrap au poulet', 'Wrap au poulet grille ou croustillant. Servi avec des frites', 13.99, false, true);
