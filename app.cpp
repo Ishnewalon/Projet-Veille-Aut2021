@@ -60,6 +60,15 @@ void App::internalMenu(User user) {
 		std::cout << "d) Logout" << std::endl;
 		std::cout << "\n" << "Que voulez-vous faire?" << std::endl;
 		std::cin >> choixInterne;
+
+		switch(choixInterne) {
+			case 'a' : 
+				std::cout << "La facturation n'est pas disponible pour le moment" << std::endl;
+			case 'b' : 
+				std::cout << "La correction de facture n'est pas disponible pour le moment" << std::endl;
+			case 'c' : 
+				std::cout << "Le changement de mot de passe n'est pas disponible pour le moment" << std::endl;
+		}
 	}
 	while (choixInterne != 'd');
 }
