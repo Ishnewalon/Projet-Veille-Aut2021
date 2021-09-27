@@ -46,3 +46,25 @@ INSERT INTO diner (nom, description, prix, israbais, isdisp) VALUES
 
 INSERT INTO diner (nom, description, prix, israbais, isdisp) VALUES
 	('Wrap au poulet', 'Wrap au poulet grille ou croustillant. Servi avec des frites', 13.99, false, true);
+
+
+
+INSERT INTO breuvage (nom, description, prix, israbais, isdispo) VALUES
+	('7Up', 'Regulier et Diete',  2.99, false, true);
+
+INSERT INTO breuvage (nom, description, prix, israbais, isdispo) VALUES
+	('Coca Cola', 'Regulier, Diete et Zero',  2.99, false, true);
+
+INSERT INTO breuvage (nom, description, prix, israbais, isdispo) VALUES
+	('Cafe', '',  1.99, false, true);
+
+INSERT INTO breuvage (nom, description, prix, israbais, isdispo) VALUES
+	('Limonade', 'En canette ou en bouteille',  3.99, false, true);
+
+INSERT INTO breuvage (nom, description, prix, israbais, isdispo) VALUES
+	('Jus', 'Pomme, raisin ou orange',  2.99, false, true);
+
+
+
+
+
