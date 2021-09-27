@@ -58,6 +58,8 @@ void App::internalMenu(User user) {
 		std::cout << "b) Corriger Facture (non fonctionnel)" << std::endl;
 		std::cout << "c) Changer de mot de passe (non fonctionnel)" << std::endl;
 		std::cout << "d) Logout" << std::endl;
+		std::cout << "\n" << "Que voulez-vous faire?" << std::endl;
+		std::cin >> choixInterne;
 	}
 	while (choixInterne != 'd');
 }
