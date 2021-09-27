@@ -25,15 +25,6 @@ CREATE TABLE IF NOT EXIST diner (
 	isDispo		bool
 );
 
-CREATE TABLE IF NOT EXIST souper (
-	id 		SERIAL PRIMARY KEY,
-	nom 		TEXT,
-	description	TEXT,
-	prix		NUMERIC,
-	isRabais	bool,
-	isDispo		bool
-);
-
 CREATE TABLE IF NOT EXIST breuvage (
 	id 		SERIAL PRIMARY KEY,
 	nom 		TEXT,
