@@ -32,11 +32,10 @@ bool SQLRequests::findUser(User &user){
                 pqxx::result R(N.exec(sqlStatement));
                 
                 for (pqxx::result::const_iterator iterator = R.begin(); iterator != R.end(); ++iterator){ 
-			//std::cout <<  iterator["nom"].as<std::string>() << std::endl;
-			//std::cout << iterator["prenom"].as<std::string>() << std::endl;
+			user.setNom(iterator["nom"].as<std::string>());
+			user.setPrenom(iterator["prenom"].as<std::string>());
 			return true;
                 }
-                //std::cout << "Fin des donnes" << std::endl;
 		return false;
 }
 

@@ -23,6 +23,7 @@ void App::displayMenu() {
                 std::cin >> choix;
 
                 if (choix == 'a') {
+			std::cout << std::endl;
 			connexionEmp();
 		}
 	}
@@ -37,10 +38,15 @@ void App::connexionEmp() {
         User user{numEmp, mdp};
 	if (sql->findUser(user)){
 		std::cout << "User found" << std::endl;
+		std::cout << user.getNom() << user.getPrenom() << std::endl;
         }
-	/*if (sql->findUser(user.getNumEmp(), user.getMDP())){
-		std::cout << "User found" << std::endl;
-        }*/
+	else {
+		std::cout << std::endl;
+		std::cout << "Numero d'employe ou Mot de Passe invalid" << std::endl;
+		std::cout << std::endl;
+		std::cout << "------------------" << std::endl;
+		std::cout << std::endl;
+	}
 }
 
 /*void App::internalMenu() {
