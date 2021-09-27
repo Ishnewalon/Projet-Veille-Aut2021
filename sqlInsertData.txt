@@ -115,3 +115,20 @@ INSERT INTO combo (nom, description, prix, israbais, isdispo) VALUES
 
 INSERT INTO combo (nom, description, prix, israbais, isdispo) VALUES
 	('Saumon  fume Combo', 'Inclu saumon fume, une boisson gazeuse et un dessert', 27.99, false, true);
+
+
+
+INSERT INTO utilisateurs (nom, prenom, numemp, mdp) VALUES 
+	('Lukeworth', 'Bella', 'S38495', 'lukbel');
+
+INSERT INTO utilisateurs (nom, prenom, numemp, mdp) VALUES 
+	('Paris', 'Maxime', 'S98365', 'parmax');
+
+INSERT INTO utilisateurs (nom, prenom, numemp, mdp) VALUES 
+	('Stilton', 'Geronimo', 'S32489', 'gersti');
+
+INSERT INTO utilisateurs (nom, prenom, numemp, mdp) VALUES 
+	('Riviera', 'Jeanne', 'S21394', 'rivjea');
+
+INSERT INTO utilisateurs (nom, prenom, numemp, mdp) VALUES 
+	('Cougar', 'John', 'S54389', 'coujoh');
