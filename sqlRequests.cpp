@@ -9,7 +9,7 @@ const std::string SQLRequests::password {"inf556"};
 const std::string SQLRequests::hostaddr {"127.0.0.1"};
 const std::string SQLRequests::port {"5432"};
 
-static std::string SQLRequests::connectionString(){
+std::string SQLRequests::connectionString(){
 		return "dbname = " + dbName + " user = " + userName + " password = " + password + " hostaddr = " + hostaddr + " port = " + port;
 	}	
 

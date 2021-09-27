@@ -1,11 +1,19 @@
 #include <iostream>
 #include <string>
 #include <pqxx/pqxx>
-#include "SQLRequests.hpp"
-#include "User.hpp"
+#include "App.hpp"
 
 int main(){
-	SQLRequests sql{};
+	App app{};
+	try {
+		app.run();
+	}
+	catch (const std::exception &e) {
+		std::cerr << e.what() << std::endl;
+                return 1;
+        }
+
+/*	SQLRequests sql{};
 	char choix;
 	std::string numEmp;
 	std::string mdp;
@@ -46,13 +54,12 @@ int main(){
 
 	}
 	while (choix != 'q');
-	/*
+	
 	User user{"S65739", "unMDP"};
 	user.setNom("James");
 	user.setPrenom("Cordon");
 	std::cout << user.toString() << std::endl;
 	*/
-
         return 0;
 }
 

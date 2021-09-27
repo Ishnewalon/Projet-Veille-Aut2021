@@ -11,7 +11,7 @@ class SQLRequests {
 		static const std::string port;
 		pqxx::connection &C;
 	public:
-		SQLRequests(pqxx::connection &C) C{C} {}
+		SQLRequests(pqxx::connection &C): C{C} {}
 		//void createTable(pqxx::connection &C);
 		//void populateTable(pqxx::connection &C);
 		//void emptyTable(pqxx::connection &C);

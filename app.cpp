@@ -4,12 +4,17 @@
 #include "app.hpp"
 
 void App::run() {
+	std::cout << SQLRequests::connectionString() << std::endl;
+#if 0
 	pqxx::connection C(SQLRequests::connectionString());
+
+
 	if (C.is_open()) {
 		std::cout << "La connexion a reussie" << std::endl;
-		sql = new SQLRequests(&C) {};
-		displayMenu();		
+		sql = new SQLRequests(C);
+		displayMenu();
 	}
+#endif
 }
 
 void App::displayMenu() {
@@ -21,12 +26,9 @@ void App::displayMenu() {
                 std::cin >> choix;
 
                 if (choix == 'a') {
-                        std::cout << "Votre numero d'employe" << std::endl;
-                        std::cin >> numEmp;
-                        std::cout << "Votre mot de passe" << std::endl;
-                        std::cin >> mdp;
-                        User user{numEmp, mdp};
+			connexionEmp();
 		}
+	}
         while (choix != 'q');	
 }
 
