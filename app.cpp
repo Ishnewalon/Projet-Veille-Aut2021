@@ -18,8 +18,9 @@ void App::displayMenu() {
 	do {
 		std::cout << "Bienvenue Chez Barbies Resto Bar Grill" << std::endl;
                 std::cout << "a) Connexion" << "\n"
-                        << "q) Quitter" << std::endl;
-                std::cout << "Que voulez-vous faire?" << std::endl;
+                        << "q) Quitter" << "\n" << std::endl;
+                
+		std::cout << "Que voulez-vous faire?" << std::endl;
                 std::cin >> choixExterne;
 
                 if (choixExterne == 'a') {
@@ -64,10 +65,13 @@ void App::internalMenu(User user) {
 		switch(choixInterne) {
 			case 'a' : 
 				std::cout << "La facturation n'est pas disponible pour le moment" << std::endl;
+				break;
 			case 'b' : 
 				std::cout << "La correction de facture n'est pas disponible pour le moment" << std::endl;
+				break;
 			case 'c' : 
 				std::cout << "Le changement de mot de passe n'est pas disponible pour le moment" << std::endl;
+				break;	
 		}
 	}
 	while (choixInterne != 'd');
