@@ -1,6 +1,7 @@
 #pragma once
 #include <pqxx/pqxx>
 #include <string>
+#include "user.hpp"
 
 class SQLRequests {
 	private:
@@ -17,6 +18,6 @@ class SQLRequests {
 		//void emptyTable(pqxx::connection &C);
 		static std::string connectionString();
 		void listRecords(std::string tableName);
-		bool findUser(std::string numEmp, std::string mdp);
+		bool findUser(User &user);
 		//void updateRecords(pqxx::connection &C, std::string tableName);
 };

@@ -2,6 +2,7 @@
 #include <string>
 #include <pqxx/pqxx>
 #include "app.hpp"
+#include "user.hpp"
 
 void App::run() {
 
@@ -34,9 +35,15 @@ void App::connexionEmp() {
         std::cout << "Votre mot de passe" << std::endl;
         std::cin >> mdp;
         User user{numEmp, mdp};
-	if (sql->findUser(user.getNumEmp(), user.getMDP())){
+	if (sql->findUser(user)){
 		std::cout << "User found" << std::endl;
         }
-
+	/*if (sql->findUser(user.getNumEmp(), user.getMDP())){
+		std::cout << "User found" << std::endl;
+        }*/
 }
+
+/*void App::internalMenu() {
+	
+}*/
 

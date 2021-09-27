@@ -26,18 +26,17 @@ void SQLRequests::listRecords(std::string tableName){
 	        std::cout << "Fin des donnes" << std::endl;
 }
 
-bool SQLRequests::findUser(std::string numEmp, std::string mdp){
-                std::string sqlStatement = "SELECT * FROM utilisateurs WHERE numemp = '" + numEmp + "' AND mdp = '" + mdp + "' ;";
+bool SQLRequests::findUser(User &user){
+                std::string sqlStatement = "SELECT * FROM utilisateurs WHERE numemp = '" + user.getNumEmp() + "' AND mdp = '" + user.getMDP() + "' ;";
                 pqxx::nontransaction N(C);
                 pqxx::result R(N.exec(sqlStatement));
                 
-                for (pqxx::result::const_iterator iterator = R.begin(); iterator != R.end(); ++iterator){ //See what is best ++iterator or iterator++
-
-			std::cout <<  iterator["nom"].as<std::string>() << std::endl;
-			std::cout << iterator["prenom"].as<std::string>() << std::endl;
+                for (pqxx::result::const_iterator iterator = R.begin(); iterator != R.end(); ++iterator){ 
+			//std::cout <<  iterator["nom"].as<std::string>() << std::endl;
+			//std::cout << iterator["prenom"].as<std::string>() << std::endl;
 			return true;
                 }
-                std::cout << "Fin des donnes" << std::endl;
+                //std::cout << "Fin des donnes" << std::endl;
 		return false;
 }
 

@@ -2,7 +2,7 @@
 #include <pqxx/pqxx>
 #include <string>
 #include "SQLRequests.hpp"
-#include "User.hpp"
+#include "user.hpp"
 
 class App {
         private:
