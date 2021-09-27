@@ -20,14 +20,14 @@ void App::displayMenu() {
                 std::cout << "a) Connexion" << "\n"
                         << "q) Quitter" << std::endl;
                 std::cout << "Que voulez-vous faire?" << std::endl;
-                std::cin >> choix;
+                std::cin >> choixExterne;
 
-                if (choix == 'a') {
+                if (choixExterne == 'a') {
 			std::cout << std::endl;
 			connexionEmp();
 		}
 	}
-        while (choix != 'q');	
+        while (choixExterne != 'q');	
 }
 
 void App::connexionEmp() {
@@ -39,6 +39,7 @@ void App::connexionEmp() {
 	if (sql->findUser(user)){
 		std::cout << "User found" << std::endl;
 		std::cout << user.getNom() << user.getPrenom() << std::endl;
+		internalMenu(user);
         }
 	else {
 		std::cout << std::endl;
@@ -49,7 +50,15 @@ void App::connexionEmp() {
 	}
 }
 
-/*void App::internalMenu() {
-	
-}*/
+void App::internalMenu(User user) {
+	std::cout << "Bonjour " << user.getNom() << ", " << user.getPrenom() << std::endl;
+	do {
+		std::cout << std::endl;
+		std::cout << "a) Facturation (non fonctionnel)" << std::endl;
+		std::cout << "b) Corriger Facture (non fonctionnel)" << std::endl;
+		std::cout << "c) Changer de mot de passe (non fonctionnel)" << std::endl;
+		std::cout << "d) Logout" << std::endl;
+	}
+	while (choixInterne != 'd');
+}
 

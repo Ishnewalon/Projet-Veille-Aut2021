@@ -9,12 +9,14 @@ class App {
 		pqxx::connection C;
         	std::string numEmp;
 		std::string mdp;
-		char choix;
+		char choixExterne;
+		char choixInterne;
 		SQLRequests *sql{nullptr};
 	public: 
                 App(): C{SQLRequests::connectionString()} {}
 		void run();
 		void displayMenu();
 		void connexionEmp();
+		void internalMenu(User user);
 };
 
