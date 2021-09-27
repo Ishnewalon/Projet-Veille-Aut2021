@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXIST souper (
+CREATE TABLE IF NOT EXISTS souper (
 	id 		SERIAL PRIMARY KEY,
 	nom 		TEXT,
 	description	TEXT,
@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXIST souper (
 	isDispo		bool
 );
 
-CREATE TABLE IF NOT EXIST dejeuner (
+CREATE TABLE IF NOT EXISTS dejeuner (
 	id 		SERIAL PRIMARY KEY,
 	nom 		TEXT,
 	description	TEXT,
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXIST dejeuner (
 	isDispo		bool
 );
 
-CREATE TABLE IF NOT EXIST diner (
+CREATE TABLE IF NOT EXISTS diner (
 	id 		SERIAL PRIMARY KEY,
 	nom 		TEXT,
 	description	TEXT,
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXIST diner (
 	isDispo		bool
 );
 
-CREATE TABLE IF NOT EXIST breuvage (
+CREATE TABLE IF NOT EXISTS breuvage (
 	id 		SERIAL PRIMARY KEY,
 	nom 		TEXT,
 	description	TEXT,
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXIST breuvage (
 	isDispo		bool
 );
 
-CREATE TABLE IF NOT EXIST dessert (
+CREATE TABLE IF NOT EXISTS dessert (
 	id 		SERIAL PRIMARY KEY,
 	nom 		TEXT,
 	description	TEXT,
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXIST dessert (
 	isDispo		bool
 );
 
-CREATE TABLE IF NOT EXIST enfant (
+CREATE TABLE IF NOT EXISTS enfant (
 	id 		SERIAL PRIMARY KEY,
 	nom 		TEXT,
 	description	TEXT,
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXIST enfant (
 	isDispo		bool
 );
 
-CREATE TABLE IF NOT EXIST combo (
+CREATE TABLE IF NOT EXISTS combo (
 	id 		SERIAL PRIMARY KEY,
 	nom 		TEXT,
 	description	TEXT,
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXIST combo (
 	isDispo		bool
 );
 
-CREATE TABLE IF NOT EXIST utilisateurs (
+CREATE TABLE IF NOT EXISTS utilisateurs (
 	id 		SERIAL PRIMARY KEY,
 	nom		TEXT,
 	prenom		TEXT,
