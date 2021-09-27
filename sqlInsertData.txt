@@ -81,3 +81,20 @@ INSERT INTO dessert (nom, description, prix, israbais, isdispo) VALUES
 
 INSERT INTO dessert (nom, description, prix, israbais, isdispo) VALUES
 	('Creme galcee', 'Chocolat, vanille ou fraise', 3.99, false, true);
+
+
+
+INSERT INTO enfant (nom, description, prix, israbais, isdispo) VALUES
+	('Croquette de poulet', '4 croquettes en forme de dinosaurs. Servi avec frites', 7.99, false, true);
+
+INSERT INTO enfant (nom, description, prix, israbais, isdispo) VALUES
+	('Spaghetti Bolognaise', 'Spaghetti servi avec une sauce a la viande', 5.99, false, true);
+
+INSERT INTO enfant (nom, description, prix, israbais, isdispo) VALUES
+	('Grilled cheese', 'Fait avec du fromage suisse', 3.99, false, true);
+
+INSERT INTO enfant (nom, description, prix, israbais, isdispo) VALUES
+	('Pizza', 'Petite pizza au fromage', 6.99, false, true);
+
+INSERT INTO enfant (nom, description, prix, israbais, isdispo) VALUES
+	('Hot dog', '1 ho dog servi avec frites', 4.99, false, true);
