@@ -67,4 +67,17 @@ INSERT INTO breuvage (nom, description, prix, israbais, isdispo) VALUES
 
 
 
+INSERT INTO dessert (nom, description, prix, israbais, isdispo) VALUES
+	('Tiramisu', 'Gateau froid au cafe', 5.99, false, true);
 
+INSERT INTO dessert (nom, description, prix, israbais, isdispo) VALUES
+	('Gateau au chocolat', 'Gateau au chocolat', 5.99, false, true);
+
+INSERT INTO dessert (nom, description, prix, israbais, isdispo) VALUES
+	('Mille-Feuille', 'Gateau froid au cafe', 6.99, false, true);
+
+INSERT INTO dessert (nom, description, prix, israbais, isdispo) VALUES
+	('Brownies', 'Brownies moeulleux avec centre fondant. Peut contenir des noix', 7.99, false, true);
+
+INSERT INTO dessert (nom, description, prix, israbais, isdispo) VALUES
+	('Creme galcee', 'Chocolat, vanille ou fraise', 3.99, false, true);
