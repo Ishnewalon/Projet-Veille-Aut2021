@@ -4,17 +4,13 @@
 #include "app.hpp"
 
 void App::run() {
-	std::cout << SQLRequests::connectionString() << std::endl;
-#if 0
+
 	pqxx::connection C(SQLRequests::connectionString());
-
-
 	if (C.is_open()) {
 		std::cout << "La connexion a reussie" << std::endl;
 		sql = new SQLRequests(C);
 		displayMenu();
 	}
-#endif
 }
 
 void App::displayMenu() {
