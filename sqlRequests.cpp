@@ -39,9 +39,9 @@ bool SQLRequests::findUser(User &user){
 		return false;
 }
 
-void SQLRequests::updatePassword(std::string oldPassword, std::string newPassword) {
+void SQLRequests::updatePassword(std::string empID, std::string oldPassword, std::string newPassword) {
 		std::string sqlStatement = "UPDATE utilisateurs SET mdp = '" + newPassword + "'" \
-					     " WHERE mdp = '" + oldPassword + "';";
+					     " WHERE mdp = '" + oldPassword + "' AND numemp = '" + empID + "';";
         	pqxx::work W(C);
         	W.exec(sqlStatement);
         	W.commit();

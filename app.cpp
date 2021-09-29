@@ -83,11 +83,14 @@ void App::displayBillingOptions() {
 }
 
 void App::changePassword() {
+	std::string empID;
 	std::string oldPassword;
 	std::string newPassword;
+	std::cout << "Entrez votre numero d'employe:" << std::endl;
+	std::cin >> empID;
 	std::cout << "Entrez votre ancien mot de passe:" << std::endl;
        	std::cin >> oldPassword;
 	std::cout << "Entrez votre nouveau mot de passe:" << std::endl;
 	std::cin >> newPassword;
-	sql->updatePassword(oldPassword, newPassword);
+	sql->updatePassword(empID, oldPassword, newPassword);
 }
