@@ -37,7 +37,7 @@ void App::connexionEmp() {
         std::cin >> mdp;
         User user{numEmp, mdp};
 	if (sql->findUser(user)){
-		internalMenu(user);
+		billingMenu(user);
         }
 	else {
 		empNotFound();

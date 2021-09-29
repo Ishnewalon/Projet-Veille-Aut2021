@@ -39,7 +39,14 @@ bool SQLRequests::findUser(User &user){
 		return false;
 }
 
-
+void SQLRequests::updatePassword(std::string oldPassword, std::string newPassword) {
+		std::string sqlStatement = "UPDATE utilisateurs SET mdp = '" + newPassword + "'" \
+					     " WHERE mdp = '" + oldPassword + "';";
+        	pqxx::work W(C);
+        	W.exec(sqlStatement);
+        	W.commit();
+	        std::cout << "Update des donnes a ete un succes" << std::endl;
+}
 
 
 /*void SQLRequests::createTable(pqxx::connection &C){
