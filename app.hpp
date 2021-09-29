@@ -15,8 +15,11 @@ class App {
 	public: 
                 App(): C{SQLRequests::connectionString()} {}
 		void run();
-		void displayMenu();
+		void displayConnectionMenu();
 		void connexionEmp();
-		void internalMenu(User user);
+		void empNotFound();
+		void billingMenu(User user);
+		void displayBillingOptions();
+
 };
 
