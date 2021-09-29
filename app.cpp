@@ -64,7 +64,8 @@ void App::billingMenu(User user) {
 				std::cout << "La correction de facture n'est pas disponible pour le moment" << std::endl;
 				break;
 			case 'c' : 
-				std::cout << "Le changement de mot de passe n'est pas disponible pour le moment" << std::endl;
+				changePassword();
+				//std::cout << "Le changement de mot de passe n'est pas disponible pour le moment" << std::endl;
 				break;	
 		}
 	}
@@ -79,4 +80,14 @@ void App::displayBillingOptions() {
 	std::cout << "d) Logout" << std::endl;
 	std::cout << "\n" << "Que voulez-vous faire?" << std::endl;
 	std::cin >> choixInterne;
+}
+
+void App::changePassword() {
+	std::string oldPassword;
+	std::string newPassword;
+	std::cout << "Entrez votre ancien mot de passe:" << std::endl;
+       	std::cin >> oldPassword;
+	std::cout << "Entrez votre nouveau mot de passe:" << std::endl;
+	std::cin >> newPassword;
+	sql->updatePassword(oldPassword, newPassword);
 }

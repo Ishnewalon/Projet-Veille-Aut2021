@@ -20,6 +20,7 @@ class App {
 		void empNotFound();
 		void billingMenu(User user);
 		void displayBillingOptions();
+		void changePassword();
 
 };
 
