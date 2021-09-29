@@ -94,3 +94,17 @@ void App::changePassword() {
 	std::cin >> newPassword;
 	sql->updatePassword(empID, oldPassword, newPassword);
 }
+
+void App::changePrice() {
+	double newPrice;
+	std::string tableName;
+	std::string menuItemName;
+	std::cout << std::endl;
+	std::cout << "Changement de prix \n" << std::endl;
+	std::cout << "De quel menu provient le prix a changer? (Souper, Diner, Dejeuner, etc)" << std::endl;
+	std::cin >> tableName;
+	std::cout << "Entrez le nom du plat" << std::endl;
+	std::cin >> menuItemName;
+	std::cout << "Entrez le nouveau prix" << std::endl;
+	std::cin >> newPrice;	
+}

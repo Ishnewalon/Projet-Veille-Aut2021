@@ -21,6 +21,6 @@ class App {
 		void billingMenu(User user);
 		void displayBillingOptions();
 		void changePassword();
-
+		void changePrice();
 };
 
