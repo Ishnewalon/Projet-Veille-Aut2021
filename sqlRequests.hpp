@@ -20,5 +20,6 @@ class SQLRequests {
 		void listRecords(std::string tableName);
 		bool findUser(User &user);
 		void updatePassword(std::string empID, std::string oldPassword, std::string newPassword);
+		void updatePrice(std::string tableName, std::string menuItemName, double newPrice);
 		//void updateRecords(pqxx::connection &C, std::string tableName);
 };

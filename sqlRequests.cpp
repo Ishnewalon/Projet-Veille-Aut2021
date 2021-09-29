@@ -40,12 +40,21 @@ bool SQLRequests::findUser(User &user){
 }
 
 void SQLRequests::updatePassword(std::string empID, std::string oldPassword, std::string newPassword) {
-		std::string sqlStatement = "UPDATE utilisateurs SET mdp = '" + newPassword + "'" \
-					     " WHERE mdp = '" + oldPassword + "' AND numemp = '" + empID + "';";
-        	pqxx::work W(C);
-        	W.exec(sqlStatement);
-        	W.commit();
-	        std::cout << "Update des donnes a ete un succes" << std::endl;
+	std::string sqlStatement = "UPDATE utilisateurs SET mdp = '" + newPassword + "'" \
+				     " WHERE mdp = '" + oldPassword + "' AND numemp = '" + empID + "';";
+        pqxx::work W(C);
+        W.exec(sqlStatement);
+        W.commit();
+	std::cout << "Changement du mot de passe a ete un succes" << std::endl;
+}
+
+void SQLRequests::updatePrice(std::string tableName, std::string menuItemName, double newPrice) {
+	std::string sqlStatement = "UPDATE " + tableName + " SET prix = " + std::to_string(newPrice) + \
+				    " WHERE nom = '" + menuItemName + "';";
+	pqxx::work W(C);
+	W.exec(sqlStatement);
+	W.commit();
+	std::cout << "Changement du prix effectue" << std::endl;
 }
 
 

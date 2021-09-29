@@ -113,5 +113,5 @@ void App::changePrice() {
 	std::cin >> menuItemName;
 	std::cout << "Entrez le nouveau prix" << std::endl;
 	std::cin >> newPrice;	
-	//sql->updatePrice(tableName, menuItemName, newPrice);
+	sql->updatePrice(tableName, menuItemName, newPrice);
 }
