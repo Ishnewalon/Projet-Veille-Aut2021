@@ -65,19 +65,25 @@ void App::billingMenu(User user) {
 				break;
 			case 'c' : 
 				changePassword();
-				//std::cout << "Le changement de mot de passe n'est pas disponible pour le moment" << std::endl;
+				break;
+			case 'd' :
+				changePrice();
 				break;	
+			default :
+				std::cout << "Le choix n'est pas valid. Reessayer a nouveau" <<std::endl;
+				break;
 		}
 	}
-	while (choixInterne != 'd');
+	while (choixInterne != 'e');
 }
 
 void App::displayBillingOptions() {
 	std::cout << std::endl;
 	std::cout << "a) Facturation (non fonctionnel)" << std::endl;
 	std::cout << "b) Corriger Facture (non fonctionnel)" << std::endl;
-	std::cout << "c) Changer de mot de passe (non fonctionnel)" << std::endl;
-	std::cout << "d) Logout" << std::endl;
+	std::cout << "c) Changer de mot de passe" << std::endl;
+	std::cout << "d) Changer le prix d'un plat (non fonctionnel)" << std::endl;
+	std::cout << "e) Logout" << std::endl;
 	std::cout << "\n" << "Que voulez-vous faire?" << std::endl;
 	std::cin >> choixInterne;
 }
@@ -107,4 +113,5 @@ void App::changePrice() {
 	std::cin >> menuItemName;
 	std::cout << "Entrez le nouveau prix" << std::endl;
 	std::cin >> newPrice;	
+	//sql->updatePrice(tableName, menuItemName, newPrice);
 }
