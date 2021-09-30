@@ -3,6 +3,8 @@
 #include <string>
 #include "SQLRequests.hpp"
 #include "user.hpp"
+#include <vector>
+#include "menuItem.hpp"
 
 class App {
         private:
@@ -12,6 +14,7 @@ class App {
 		char choixExterne;
 		char choixInterne;
 		SQLRequests *sql{nullptr};
+		std::vector<MenuItem> facture;
 	public: 
                 App(): C{SQLRequests::connectionString()} {}
 		void run();
