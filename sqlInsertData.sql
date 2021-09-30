@@ -32,19 +32,19 @@ INSERT INTO dejeuner (nom, description, prix, israbais, isdispo) VALUES
 
 
 
-INSERT INTO diner (nom, description, prix, israbais, isdisp) VALUES
+INSERT INTO diner (nom, description, prix, israbais, isdispo) VALUES
 	('Macaroni au fromage', 'Un macaroni fait au 3 fromages: cheddar, mozarella et Monterey Jack', 12.99, false, true);
 
-INSERT INTO diner (nom, description, prix, israbais, isdisp) VALUES
+INSERT INTO diner (nom, description, prix, israbais, isdispo) VALUES
 	('Hot Dog', '2 hot dogs steamer avec frites. Peut etre changer pour poutine', 8.99, false, true);
 
-INSERT INTO diner (nom, description, prix, israbais, isdisp) VALUES
+INSERT INTO diner (nom, description, prix, israbais, isdispo) VALUES
 	('Hamburger', 'Un hamburger avec frites. Peut etre changer pour une poutine', 10.99, false, true);
 
-INSERT INTO diner (nom, description, prix, israbais, isdisp) VALUES
+INSERT INTO diner (nom, description, prix, israbais, isdispo) VALUES
 	('BLT', 'BLT viande blanche ou fonce. Servit avec frites et salade de choux', 12.99, false, true);
 
-INSERT INTO diner (nom, description, prix, israbais, isdisp) VALUES
+INSERT INTO diner (nom, description, prix, israbais, isdispo) VALUES
 	('Wrap au poulet', 'Wrap au poulet grille ou croustillant. Servi avec des frites', 13.99, false, true);
 
 
@@ -132,3 +132,4 @@ INSERT INTO utilisateurs (nom, prenom, numemp, mdp) VALUES
 
 INSERT INTO utilisateurs (nom, prenom, numemp, mdp) VALUES 
 	('Cougar', 'John', 'S54389', 'coujoh');
+

@@ -82,7 +82,7 @@ void App::displayBillingOptions() {
 	std::cout << "a) Facturation (non fonctionnel)" << std::endl;
 	std::cout << "b) Corriger Facture (non fonctionnel)" << std::endl;
 	std::cout << "c) Changer de mot de passe" << std::endl;
-	std::cout << "d) Changer le prix d'un plat (non fonctionnel)" << std::endl;
+	std::cout << "d) Changer le prix d'un plat" << std::endl;
 	std::cout << "e) Logout" << std::endl;
 	std::cout << "\n" << "Que voulez-vous faire?" << std::endl;
 	std::cin >> choixInterne;
