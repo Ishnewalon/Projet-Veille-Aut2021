@@ -58,6 +58,7 @@ void App::billingMenu(User user) {
 		displayBillingOptions();
 		switch(choixInterne) {
 			case 'a' : 
+				//faireFacture();
 				std::cout << "La facturation n'est pas disponible pour le moment" << std::endl;
 				break;
 			case 'b' : 
@@ -114,4 +115,48 @@ void App::changePrice() {
 	std::cout << "Entrez le nouveau prix" << std::endl;
 	std::cin >> newPrice;	
 	sql->updatePrice(tableName, menuItemName, newPrice);
+}
+
+void App::displayChoixDesMenus() {
+	std::cout << "Quel menu voulez-vous?" << std::endl;
+	std::cout << "a) Dejeuner" << std::endl;
+	std::cout << "b) Diner" << std::endl;
+	std::cout << "c) Souper" << std::endl;
+	std::cout << "d) Enfant" << std::endl;
+	std::cout << "e) Combo" << std::endl;
+	std::cout << "f) Breuvage" << std::endl;
+	std::cout << "g) Dessert" << std::endl;
+	std::cout << "f) Terminer la facture" << std::endl;
+	std::cout << "h) Quitter" << std::endl;
+	std::cout  << std::endl;
+	std::cout << "Votre choix:" << std::endl;
+	std::cin >> choixTypeMenu;
+}
+
+void App::faireFacture() {
+	do {
+		displayChoixDesMenus();
+		switch(choixTypeMenu) {
+			case 'a' :
+				break;
+			case 'b' :
+				break;
+			case 'c' :
+				break;
+			case 'd' :
+				break;
+			case 'e' :
+				break;
+			case 'f' :
+				break;	
+			case 'g' :
+				break;
+			case 'h' :
+				break;
+			default :
+				std::cout << "Le choix n'est pas valid. Reessayer a nouveau" <<std::endl;
+				break;	
+		}
+	}
+	while (choixTypeMenu != 'h')
 }

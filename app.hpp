@@ -13,6 +13,7 @@ class App {
 		std::string mdp;
 		char choixExterne;
 		char choixInterne;
+		char choixMenuType;
 		SQLRequests *sql{nullptr};
 		std::vector<MenuItem> facture;
 	public: 
@@ -25,5 +26,8 @@ class App {
 		void displayBillingOptions();
 		void changePassword();
 		void changePrice();
+		void displayChoixDesMenus();
+		void faireFacture();
+
 };
 
